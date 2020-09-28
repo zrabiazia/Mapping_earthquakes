@@ -1,1 +1,3 @@
-# Mapping_earthquakes
+Mapping Earthquakes
+
+Mapping earthquakes shows a visual presentation of earthquake data on maps from all over the world. This project purpose was to learn how to show the earthquakes on the map using mapbox map tiles, leaflet documentation on how to make basic map, JSON to get earthquake data from the US government website, add the major earth quakes data, format the colors to make easy for others to visualize the difference between the places and magnitudes. Also created mapping earthquakes data branches for team members so it get easier to pull and push data to github with or without changes.
