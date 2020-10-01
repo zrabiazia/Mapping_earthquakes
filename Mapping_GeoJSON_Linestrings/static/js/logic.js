@@ -37,7 +37,7 @@ L.control.layers(baseMaps).addTo(map);
 
 //accessing the airport GeoJSON URL
 
-let torontoData = "https://raw.githubusercontent.com/zrabiazia/Mapping_earthquakes/master/torontoRoutes.json";
+let torontoData = "https://raw.githubusercontent.com/OpenDataDE/State-zip-code-GeoJSON/master/ca_california_zip_codes_geo.min.json";
 // Add GeoJSON data.
 //let sanFranAirport =
 //{"type":"FeatureCollection","features":[{
@@ -70,14 +70,16 @@ let torontoData = "https://raw.githubusercontent.com/zrabiazia/Mapping_earthquak
 d3.json(torontoData).then(function(data) {
      console.log(data);
   // Creating a GeoJSON layer with the retrieved data.
-  L.geoJson(data, {
-    color:"#ffffa1",
-    weight : 2,
-    onEachFeature: function(feature, layer){
-      layer.bindPopup("<h3>Airline:" + feature.properties.airline + "</h3><hr><h3>Destination:" + feature.properties.dst + "</h3>");
-    }
-  }).addTo(map);
+  L.geoJson(data).addTo(map);
 });
+    // {
+    //color:"#ffffa1",
+    //weight : 2,
+    //onEachFeature: function(feature, layer){
+      //layer.bindPopup("<h3>Airline:" + feature.properties.airline + "</h3><hr><h3>Destination:" + feature.properties.dst + "</h3>");
+    //}
+  //}).addTo(map);
+//});
 
 //Grabbing our JSON Data 
 //d3.json(torontoData).then(function(data) {
